@@ -1,0 +1,64 @@
+{{#if @ariaLabel}}
+  <title>{{@ariaLabel}}</title>
+{{/if}}
+<rect
+  x="0"
+  y="0"
+  width={{@width}}
+  height={{@height}}
+  clip-path={{this.rectClipPath}}
+  style={{this.rectStyle}}
+/>
+
+<defs>
+  <clipPath id={{this.idClip}}>{{yield}}</clipPath>
+  <linearGradient id={{this.idGradient}}>
+    <stop
+      offset="0%"
+      stop-color={{@primaryColor}}
+      stop-opacity={{@primaryOpacity}}
+    >
+      {{#if @animate}}
+        <animate
+          attributeName="offset"
+          values={{this.animateValues1}}
+          keyTimes={{this.keyTimes}}
+          dur={{this.dur}}
+          repeatCount="indefinite"
+        />
+      {{/if}}
+    </stop>
+
+    <stop
+      offset="50%"
+      stop-color={{@secondaryColor}}
+      stop-opacity={{@secondaryOpacity}}
+    >
+      {{#if @animate}}
+        <animate
+          attributeName="offset"
+          values={{this.animateValues2}}
+          keyTimes={{this.keyTimes}}
+          dur={{this.dur}}
+          repeatCount="indefinite"
+        />
+      {{/if}}
+    </stop>
+
+    <stop
+      offset="100%"
+      stop-color={{@primaryColor}}
+      stop-opacity={{@primaryOpacity}}
+    >
+      {{#if @animate}}
+        <animate
+          attributeName="offset"
+          values={{this.animateValues3}}
+          keyTimes={{this.keyTimes}}
+          dur={{this.dur}}
+          repeatCount="indefinite"
+        />
+      {{/if}}
+    </stop>
+  </linearGradient>
+</defs>
