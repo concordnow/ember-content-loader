@@ -1,13 +1,20 @@
 {
   "name": "ember-content-loader",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "SVG-Powered component to easily create placeholder loadings (like Facebook cards loading)",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "loader",
+    "fake",
+    "placeholder",
+    "progressive",
+    "skeleton",
+    "skeleton-ui"
   ],
-  "repository": "",
+  "repository": "https://github.com/concordnow/ember-content-loader",
+  "homepage": "https://concordnow.github.io/ember-content-loader",
   "license": "MIT",
-  "author": "",
+  "author": "Concord Worlwide Inc.",
   "directories": {
     "doc": "doc",
     "test": "tests"
