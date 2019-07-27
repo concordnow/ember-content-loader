@@ -2,7 +2,7 @@
 
 ## Installation
 
-* `git clone <repository-url>`
+* `git clone git@github.com:concordnow/ember-content-loader.git`
 * `cd ember-content-loader`
 * `npm install`
 
