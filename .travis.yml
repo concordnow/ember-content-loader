@@ -51,5 +51,10 @@ jobs:
     - env: EMBER_TRY_SCENARIO=ember-canary
     - env: EMBER_TRY_SCENARIO=ember-default-with-jquery
 
+    - stage: deploy
+      if: (branch = master OR tag IS present) AND type = push
+      env: NAME=deploy
+      script: node_modules/.bin/ember deploy production
+
 script:
   - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO
