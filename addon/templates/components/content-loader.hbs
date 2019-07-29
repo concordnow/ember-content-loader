@@ -1,23 +1,23 @@
 <ContentLoaderSvg
-  @animate={{or @animate true}}
-  @ariaLabel={{or @ariaLabel "Loading interface..."}}
-  @baseUrl={{or @baseUrl ""}}
-  @gradientRatio={{or @gradientRatio 2}}
-  @height={{or @height 130}}
-  @interval={{or @interval 0.25}}
-  @preserveAspectRatio={{or @preserveAspectRatio "none"}}
-  @primaryColor={{or @primaryColor "#f0f0f0"}}
-  @primaryOpacity={{or @primaryOpacity 1}}
-  @rtl={{or @rtl false}}
-  @secondaryColor={{or @secondaryColor "#e0e0e0"}}
-  @secondaryOpacity={{or @secondaryOpacity 1}}
-  @speed={{or @speed 2}}
-  @width={{or @width 400}}
+  @animate={{defaults-to @animate true}}
+  @ariaLabel={{defaults-to @ariaLabel "Loading interface..."}}
+  @baseUrl={{defaults-to @baseUrl ""}}
+  @gradientRatio={{defaults-to @gradientRatio 2}}
+  @height={{defaults-to @height 130}}
+  @interval={{defaults-to @interval 0.25}}
+  @preserveAspectRatio={{defaults-to @preserveAspectRatio "none"}}
+  @primaryColor={{defaults-to @primaryColor "#f0f0f0"}}
+  @primaryOpacity={{defaults-to @primaryOpacity 1}}
+  @rtl={{defaults-to @rtl false}}
+  @secondaryColor={{defaults-to @secondaryColor "#e0e0e0"}}
+  @secondaryOpacity={{defaults-to @secondaryOpacity 1}}
+  @speed={{defaults-to @speed 2}}
+  @width={{defaults-to @width 400}}
   ...attributes
 >
   {{#if (has-block)}}
     {{yield}}
   {{else}}
-    <rect x="0" y="0" rx="5" ry="5" width={{or @width 400}} height={{or @height 130}} />
+    <rect x="0" y="0" rx="5" ry="5" width={{defaults-to @width 400}} height={{defaults-to @height 130}} />
   {{/if}}
 </ContentLoaderSvg>
