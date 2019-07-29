@@ -50,6 +50,13 @@ Options
 You can find all `<ContentLoader>` available options [here](https://concordnow.github.io/ember-content-loader/docs/api/components/content-loader)
 
 
+Thanks
+------------------------------------------------------------------------------
+
+* [react-content-loader](https://github.com/danilowoz/react-content-loader)
+* [ember-cli-addon-docs](https://github.com/ember-learn/ember-cli-addon-docs)
+
+
 Contributing
 ------------------------------------------------------------------------------
 
