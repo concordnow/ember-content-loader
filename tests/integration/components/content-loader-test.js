@@ -13,6 +13,9 @@ module('Integration | Component | content-loader', function(hooks) {
     `);
 
     percySnapshot(assert);
+
+    // Prevent 0 assertion exception
+    assert.equal(0, 0);
   }),
 
   test('it renders complex layout', async function(assert) {
@@ -51,6 +54,9 @@ module('Integration | Component | content-loader', function(hooks) {
     `);
 
     percySnapshot(assert);
+
+    // Prevent 0 assertion exception
+    assert.equal(0, 0);
   }),
 
   test('it renders with animation', async function(assert) {
