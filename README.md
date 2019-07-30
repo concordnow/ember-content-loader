@@ -2,6 +2,7 @@ ember-content-loader
 ==============================================================================
 
 [![Build Status](https://travis-ci.org/concordnow/ember-content-loader.svg?branch=master)](https://travis-ci.org/concordnow/ember-content-loader)
+[![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/concordnow/ember-content-loader)
 
 SVG-Powered component to easily create skeleton screens / placeholder loadings (like Facebook's cards loading). Documentation can be found [here](https://concordnow.github.io/ember-content-loader/)
 
