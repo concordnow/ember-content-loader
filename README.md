@@ -1,7 +1,9 @@
 ember-content-loader
 ==============================================================================
 
-SVG-Powered component to easily create skeleton screens / placeholder loadings (like Facebook's cards loading).
+[![Build Status](https://travis-ci.org/concordnow/ember-content-loader.svg?branch=master)](https://travis-ci.org/concordnow/ember-content-loader)
+
+SVG-Powered component to easily create skeleton screens / placeholder loadings (like Facebook's cards loading). Documentation can be found [here](https://concordnow.github.io/ember-content-loader/)
 
 
 Compatibility
