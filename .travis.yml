@@ -59,3 +59,12 @@ jobs:
 
 script:
   - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO
+
+deploy:
+  provider: npm
+  email: npmjs@concordnow.com
+  api_key:
+    secure: thKvDEYZZTyCgxM1Plg8d0qQIpj6rLLekZ4gujFv8mhTrwTtCgLkGCWwr7ueC/cXWNZd6oKEVvoh+CIxFwbNLojEiOFHiitCDU0RSKSwe1Y3XAZMhTLdbL9GsMjB/UDDK6XF7oOojNHNw1wrdz7kH3TJeN9lvDG7hevTxKOWDJoPPePMQ1UC0DxQJflXP+evx/+5bhAVTvTxnA0mN2Emlg3d6L/55ArPxSZ9ycDfvAcf1CLUCcTIaT05I4nMJdk4MVlKNajsSC6KdAwSQkkTiNpLsgtEAKiENBzhplkcc9AigwcmAAbeHFj+ZpjOMhNgac12iHGI6O6lB/gL0O2DXr5yBOHybxmN6nLIzq+enj9hrwhPV4rBxM0wWjBexOobwcKUX9Ye2OOo+aKJyTLp15rZJ9/HDSvc1hePjunCkUYQlxFHHB3JTCLH5eiLZRHsJLclk0fb2tqm9lI5g+I2Ltq9COZqqrOZjjfTkmsVonCc22cHcuCSqvOPXa6/EJHjkQ+xndFhsJZt+v4ZKkPMaHno7T+L+t+j5Ge/upATu9hRGufUOMZ4091VMq4vHespd5KgeM0RpPbkfe7M7u3GNpnr5Okic4QlWE1wVJXQdkPxj9t81zTTmlcs8bxE9PtPMitJA9iqbJTLSqP2XOF43YDP6J8UoQ2eeZC4Yac83Ow=
+  on:
+    tags: true
+    repo: concordnow/ember-content-loader
