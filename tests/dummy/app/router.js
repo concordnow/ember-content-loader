@@ -13,7 +13,6 @@ Router.map(function() {
     this.route('known-issues');
   });
   this.route('not-found', { path: '/*path' });
-  this.route('examples');
 });
 
 export default Router;
