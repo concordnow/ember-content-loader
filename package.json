@@ -1,7 +1,7 @@
 {
   "name": "ember-content-loader",
   "version": "0.0.0",
-  "description": "SVG-Powered component to easily create placeholder loadings (like Facebook cards loading)",
+  "description": "Easy, customizable skeletons screens",
   "keywords": [
     "ember-addon",
     "loader",

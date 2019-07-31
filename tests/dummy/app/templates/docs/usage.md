@@ -2,7 +2,7 @@
 
 ## Compatibility
 
-This addon should be compatible with **Ember.js v2.18** or above.
+This addon is tested on **Ember.js v2.18** and above.
 
 ## Installation
 
