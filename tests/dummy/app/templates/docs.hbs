@@ -1,12 +1,12 @@
-{{#docs-viewer as |viewer|}}
-  {{#viewer.nav as |nav|}}
+<DocsViewer as |viewer|>
+  <viewer.nav as |nav|>
     {{nav.item "Introduction" "docs.index"}}
     {{nav.item "Usage" "docs.usage"}}
     {{nav.item "Examples" "docs.examples"}}
     {{nav.item "Known issues" "docs.known-issues"}}
-  {{/viewer.nav}}
+  </viewer.nav>
 
-  {{#viewer.main}}
+  <viewer.main>
     {{outlet}}
-  {{/viewer.main}}
-{{/docs-viewer}}
+  </viewer.main>
+</DocsViewer>

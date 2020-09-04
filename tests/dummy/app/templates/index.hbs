@@ -1,4 +1,4 @@
-{{docs-hero }}
+<DocsHero />
 
 <div class="docs-container docs-md">
   <section class="docs-max-w-md docs-mx-auto docs-pb-8">
@@ -8,8 +8,8 @@
 
     Ember CLI addon that helps you create content placeholders / skeletons screen with simple SVG-Powered component.
 
-    {{#docs-demo as |demo|}}
-      {{#demo.example name="content-loader-demo.hbs"}}
+    <DocsDemo as |demo|>
+      <demo.example @name="content-loader-demo.hbs">
         <ContentLoader
           @height={{300}}
           @width={{500}}
@@ -40,19 +40,19 @@
           <rect x="182" y="270" rx="0" ry="0" width="141" height="38" />
           <rect x="343" y="270" rx="0" ry="0" width="141" height="38" />
         </ContentLoader>
-      {{/demo.example}}
-    {{/docs-demo}}
+      </demo.example>
+    </DocsDemo>
 
     <aside class="docs-flex docs-items-center">This addon is provided by &nbsp;<a href="https://concordnow.com"><img width="100" src="https://www.concordnow.com/wp-content/themes/concord/layoutImg/concord_logo-grey.svg" alt="Concord"></a></aside>
 
 
     <div class="docs-my-16 docs-text-right">
-      {{#link-to
-           "docs"
-           class="docs-bg-grey-darkest hover:docs-bg-black docs-text-white docs-py-2 docs-px-4 docs-no-underline docs-rounded"
-      }}
+      <LinkTo
+        @route="docs"
+        class="docs-bg-grey-darkest hover:docs-bg-black docs-text-white docs-py-2 docs-px-4 docs-no-underline docs-rounded"
+      >
         Read the docs →
-      {{/link-to}}
+      </LinkTo>
     </div>
   </section>
 </div>
