@@ -1,0 +1,14 @@
+{
+  "git": {
+    "tagName": "v${version}"
+  },
+  "npm": {
+    "publish": false
+  },
+  "plugins": {
+    "@release-it/keep-a-changelog": {
+      "addUnreleased": true,
+      "addVersionUrl": true
+    }
+  }
+}
