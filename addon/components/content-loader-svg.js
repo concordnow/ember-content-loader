@@ -2,7 +2,11 @@ import Component from '@glimmer/component';
 import { htmlSafe } from '@ember/template';
 import { guidFor } from '@ember/object/internals';
 
-export default class extends Component{
+export default class extends Component {
+  constructor() {
+    super(...arguments);
+  }
+
   get rectClipPath() {
     return htmlSafe(`url(${this.args.baseUrl}#${this.idClip})`);
   }
