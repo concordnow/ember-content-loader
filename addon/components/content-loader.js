@@ -1,15 +1,14 @@
-import Component from '@ember/component';
-import layout from '../templates/components/content-loader';
-
+import Component from '@glimmer/component';
 /**
  * This is the main component
  *
  * @class ContentLoader
  * @public
  */
-export default Component.extend({
-  layout,
-  tagName: ''
+export default class extends Component {
+  constructor() {
+    super(...arguments);
+  }
 
   /**
    * Defaults to `true`.
@@ -158,4 +157,4 @@ export default Component.extend({
    * @type Number
    * @default 1
    */
-});
+}
