@@ -1,0 +1,79 @@
+<svg
+  role="img"
+  style={{if this.rtl "transform: scaleX(-1)"}}
+  aria-label={{this.ariaLabel}}
+  viewBox={{this.viewBox}}
+  preserveAspectRatio={{this.preserveAspectRatio}}
+  ...attributes
+>
+  {{#if this.ariaLabel}}
+    <title>{{this.ariaLabel}}</title>
+  {{/if}}
+  <rect
+    x="0"
+    y="0"
+    width={{this.width}}
+    height={{this.height}}
+    clip-path={{this.rectClipPath}}
+    style={{this.rectStyle}}
+  />
+
+  <defs>
+    <clipPath id={{this.idClip}}>
+      {{#if (has-block)}}
+        {{yield}}
+      {{else}}
+        <rect x="0" y="0" rx="5" ry="5" width={{this.width}} height={{this.height}} />
+      {{/if}}
+    </clipPath>
+    <linearGradient id={{this.idGradient}}>
+      <stop
+        offset="0%"
+        stop-color={{this.primaryColor}}
+        stop-opacity={{this.primaryOpacity}}
+      >
+        {{#if this.animate}}
+          <animate
+            attributeName="offset"
+            values={{this.animateValues1}}
+            keyTimes={{this.keyTimes}}
+            dur={{this.dur}}
+            repeatCount="indefinite"
+          />
+        {{/if}}
+      </stop>
+
+      <stop
+        offset="50%"
+        stop-color={{this.secondaryColor}}
+        stop-opacity={{this.secondaryOpacity}}
+      >
+        {{#if this.animate}}
+          <animate
+            attributeName="offset"
+            values={{this.animateValues2}}
+            keyTimes={{this.keyTimes}}
+            dur={{this.dur}}
+            repeatCount="indefinite"
+          />
+        {{/if}}
+      </stop>
+
+      <stop
+        offset="100%"
+        stop-color={{this.primaryColor}}
+        stop-opacity={{this.primaryOpacity}}
+      >
+        {{#if this.animate}}
+          <animate
+            attributeName="offset"
+            values={{this.animateValues3}}
+            keyTimes={{this.keyTimes}}
+            dur={{this.dur}}
+            repeatCount="indefinite"
+          />
+        {{/if}}
+      </stop>
+    </linearGradient>
+  </defs>
+</svg>

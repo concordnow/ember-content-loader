@@ -4,10 +4,10 @@ import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import percySnapshot from '@percy/ember';
 
-module('Integration | Component | content-loader', function(hooks) {
+module('Integration | Component | content-loader', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders default layout', async function(assert) {
+  test('it renders default layout', async function (assert) {
     await render(hbs`
       <ContentLoader @animate={{false}} />
     `);
@@ -17,9 +17,8 @@ module('Integration | Component | content-loader', function(hooks) {
     // Prevent 0 assertion exception
     assert.equal(0, 0);
   }),
-
-  test('it renders complex layout', async function(assert) {
-    await render(hbs`
+    test('it renders complex layout', async function (assert) {
+      await render(hbs`
       <ContentLoader
         @height={{300}}
         @width={{500}}
@@ -53,20 +52,19 @@ module('Integration | Component | content-loader', function(hooks) {
       </ContentLoader>
     `);
 
-    percySnapshot(assert);
+      percySnapshot(assert);
 
-    // Prevent 0 assertion exception
-    assert.equal(0, 0);
-  }),
-
-  test('it renders with animation', async function(assert) {
-    await render(hbs`
+      // Prevent 0 assertion exception
+      assert.equal(0, 0);
+    }),
+    test('it renders with animation', async function (assert) {
+      await render(hbs`
       <ContentLoader @animate={{true}} />
     `);
 
-    assert.notEqual(this.element.querySelectorAll('animate').length, 0);
+      assert.notEqual(this.element.querySelectorAll('animate').length, 0);
 
-    await render(hbs`
+      await render(hbs`
       <ContentLoader
         @animate={{true}}
       >
@@ -74,10 +72,10 @@ module('Integration | Component | content-loader', function(hooks) {
       </ContentLoader>
     `);
 
-    assert.notEqual(this.element.querySelectorAll('animate').length, 0);
-  });
+      assert.notEqual(this.element.querySelectorAll('animate').length, 0);
+    });
 
-  test('it renders without animation', async function(assert) {
+  test('it renders without animation', async function (assert) {
     await render(hbs`
       <ContentLoader @animate={{false}} />
     `);
@@ -95,12 +93,15 @@ module('Integration | Component | content-loader', function(hooks) {
     assert.equal(this.element.querySelectorAll('animate').length, 0);
   });
 
-  test('it renders with title', async function(assert) {
+  test('it renders with title', async function (assert) {
     await render(hbs`
       <ContentLoader @ariaLabel='My awesome title' />
     `);
 
-    assert.equal(this.element.querySelectorAll('title')[0].textContent, 'My awesome title');
+    assert.equal(
+      this.element.querySelectorAll('title')[0].textContent,
+      'My awesome title'
+    );
 
     await render(hbs`
       <ContentLoader
@@ -110,6 +111,9 @@ module('Integration | Component | content-loader', function(hooks) {
       </ContentLoader>
     `);
 
-    assert.equal(this.element.querySelectorAll('title')[0].textContent, 'My awesome title');
+    assert.equal(
+      this.element.querySelectorAll('title')[0].textContent,
+      'My awesome title'
+    );
   });
 });

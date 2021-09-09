@@ -1,5 +1,6 @@
-import Component from '@ember/component';
-import layout from '../templates/components/content-loader';
+import Component from '@glimmer/component';
+import { htmlSafe } from '@ember/template';
+import { guidFor } from '@ember/object/internals';
 
 /**
  * This is the main component
@@ -7,9 +8,11 @@ import layout from '../templates/components/content-loader';
  * @class ContentLoader
  * @public
  */
-export default Component.extend({
-  layout,
-  tagName: ''
+export default class ContentLoader extends Component {
+  constructor() {
+    super(...arguments);
+    this.elementId = guidFor(this);
+  }
 
   /**
    * Defaults to `true`.
@@ -20,7 +23,9 @@ export default Component.extend({
    * @type Boolean
    * @default true
    */
-
+  get animate() {
+    return this.args.animate ?? true;
+  }
 
   /**
    * Defaults to `Loading interface...`
@@ -31,7 +36,9 @@ export default Component.extend({
    * @type String|Boolean
    * @default "Loading interface..."
    */
-
+  get ariaLabel() {
+    return this.args.ariaLabel ?? 'Loading interface...';
+  }
 
   /**
    * Required if you're using `<base url="/" />` in your `<head/>`.
@@ -46,6 +53,9 @@ export default Component.extend({
    * @type String
    * @default "Loading interface..."
    */
+  get baseUrl() {
+    return this.args.baseUrl ?? '';
+  }
 
   /**
    * Defaults to `2`.
@@ -56,6 +66,9 @@ export default Component.extend({
    * @type Number
    * @default 2
    */
+  get speed() {
+    return this.args.speed ?? 2;
+  }
 
   /**
    * Defaults to `0.25`.
@@ -66,6 +79,9 @@ export default Component.extend({
    * @type Number
    * @default 0.25
    */
+  get interval() {
+    return this.args.interval ?? 0.25;
+  }
 
   /**
    * Defaults to `400`.
@@ -76,6 +92,9 @@ export default Component.extend({
    * @type Number
    * @default 400
    */
+  get width() {
+    return this.args.width ?? 400;
+  }
 
   /**
    * Defaults to `130`.
@@ -84,8 +103,11 @@ export default Component.extend({
    *
    * @argument height
    * @type Number
-   * @default 400
+   * @default 130
    */
+  get height() {
+    return this.args.height ?? 130;
+  }
 
   /**
    * Defaults to `2`.
@@ -96,6 +118,9 @@ export default Component.extend({
    * @type Number
    * @default 2
    */
+  get gradientRatio() {
+    return this.args.gradientRatio ?? 2;
+  }
 
   /**
    * Defaults to `false`.
@@ -106,7 +131,9 @@ export default Component.extend({
    * @type Boolean
    * @default false
    */
-
+  get rtl() {
+    return this.args.rtl ?? false;
+  }
 
   /**
    * Defaults to `none`.
@@ -118,26 +145,35 @@ export default Component.extend({
    * @type String
    * @default "none"
    */
+  get preserveAspectRatio() {
+    return this.args.preserveAspectRatio ?? 'none';
+  }
 
   /**
-   * Defaults to `#f3f3f3`.
+   * Defaults to `#f0f0f0`.
    *
    * Background of animation.
    *
    * @argument primaryColor
    * @type String
-   * @default "#f3f3f3"
+   * @default "#f0f0f0"
    */
+  get primaryColor() {
+    return this.args.primaryColor ?? '#f0f0f0';
+  }
 
   /**
-   * Defaults to `#ecebeb`.
+   * Defaults to `#e0e0e0`.
    *
    * Placeholder/layer of animation.
    *
    * @argument secondaryColor
    * @type String
-   * @default "#ecebeb"
+   * @default "#e0e0e0"
    */
+  get secondaryColor() {
+    return this.args.secondaryColor ?? '#e0e0e0';
+  }
 
   /**
    * Defaults to `1`.
@@ -148,6 +184,9 @@ export default Component.extend({
    * @type Number
    * @default 1
    */
+  get primaryOpacity() {
+    return this.args.primaryOpacity ?? 1;
+  }
 
   /**
    * Defaults to `1`.
@@ -158,4 +197,48 @@ export default Component.extend({
    * @type Number
    * @default 1
    */
-});
+  get secondaryOpacity() {
+    return this.args.secondaryOpacity ?? 1;
+  }
+
+  get viewBox() {
+    return `0 0 ${this.width} ${this.height}`;
+  }
+
+  get rectClipPath() {
+    return `url(${this.baseUrl}#${this.idClip})`;
+  }
+
+  get rectStyle() {
+    return htmlSafe(`fill: url(${this.baseUrl}#${this.idGradient})`);
+  }
+
+  get animateValues1() {
+    return `${-this.gradientRatio}; ${-this.gradientRatio}; 1`;
+  }
+
+  get animateValues2() {
+    let div2 = this.gradientRatio / 2;
+    return `${-div2}; ${-div2}; ${1 + div2}`;
+  }
+
+  get animateValues3() {
+    return `0; 0; ${1 + this.gradientRatio}`;
+  }
+
+  get idClip() {
+    return `${this.elementId}-idClip`;
+  }
+
+  get idGradient() {
+    return `${this.elementId}-idGradient`;
+  }
+
+  get keyTimes() {
+    return `0; ${this.interval}; 1`;
+  }
+
+  get dur() {
+    return `${this.speed}s`;
+  }
+}
