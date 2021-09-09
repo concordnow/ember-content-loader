@@ -2,9 +2,4 @@
 
 module.exports = {
   extends: 'octane',
-  rules: {
-    'no-inline-styles': {
-      allowDynamicStyles: true
-    }
-  }
 };
