@@ -11,7 +11,7 @@ SVG-Powered component to easily create skeleton screens / placeholder loadings (
 Compatibility
 ------------------------------------------------------------------------------
 
-* Ember.js v3.12 or above
+* Ember.js v3.16 or above
 * Ember CLI v2.13 or above
 * Node.js v12 or above
 
