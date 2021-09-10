@@ -1,7 +1,7 @@
 ember-content-loader
 ==============================================================================
 
-[![Build Status](https://travis-ci.org/concordnow/ember-content-loader.svg?branch=master)](https://travis-ci.org/concordnow/ember-content-loader)
+[![Build Status](https://github.com/concordnow/ember-content-loader/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/concordnow/ember-content-loader/actions/workflows/main.yml)
 [![Ember Observer Score](https://emberobserver.com/badges/ember-content-loader.svg)](https://emberobserver.com/addons/ember-content-loader)
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/concordnow/ember-content-loader)
 
