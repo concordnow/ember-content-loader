@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0] - 2021-09-10
+
 ### Changed
 - Bump Node requirement to v12 minimum
 - Requires ember-auto-import >= 2
@@ -59,6 +61,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - First implementation
 
+[2.0.0]: https://github.com/concordnow/ember-content-loader/compare/v1.0.1...v2.0.0
 [1.0.1]: https://github.com/concordnow/ember-content-loader/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/concordnow/ember-content-loader/compare/v0.1.3...v1.0.0
 [0.1.3]: https://github.com/concordnow/ember-content-loader/compare/v0.1.2...v0.1.3
@@ -66,4 +69,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [0.1.1]: https://github.com/concordnow/ember-content-loader/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/concordnow/ember-content-loader/releases/tag/v0.1.0
 
-[Unreleased]: https://github.com/concordnow/ember-content-loader/compare/v1.0.1...HEAD
+[Unreleased]: https://github.com/concordnow/ember-content-loader/compare/v2.0.0...HEAD
