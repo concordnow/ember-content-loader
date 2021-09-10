@@ -31,6 +31,8 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run test:percy
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
   floating-dependencies:
     name: 'Floating Dependencies'
