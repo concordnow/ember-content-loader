@@ -16,14 +16,21 @@
     height={{this.height}}
     clip-path={{this.rectClipPath}}
     style={{this.rectStyle}}
-  />
+  ></rect>
 
   <defs>
     <clipPath id={{this.idClip}}>
       {{#if (has-block)}}
         {{yield}}
       {{else}}
-        <rect x="0" y="0" rx="5" ry="5" width={{this.width}} height={{this.height}} />
+        <rect
+          x="0"
+          y="0"
+          rx="5"
+          ry="5"
+          width={{this.width}}
+          height={{this.height}}
+        ></rect>
       {{/if}}
     </clipPath>
     <linearGradient id={{this.idGradient}}>
@@ -39,7 +46,7 @@
             keyTimes={{this.keyTimes}}
             dur={{this.dur}}
             repeatCount="indefinite"
-          />
+          ></animate>
         {{/if}}
       </stop>
 
@@ -55,7 +62,7 @@
             keyTimes={{this.keyTimes}}
             dur={{this.dur}}
             repeatCount="indefinite"
-          />
+          ></animate>
         {{/if}}
       </stop>
 
@@ -71,7 +78,7 @@
             keyTimes={{this.keyTimes}}
             dur={{this.dur}}
             repeatCount="indefinite"
-          />
+          ></animate>
         {{/if}}
       </stop>
     </linearGradient>
