@@ -14,3 +14,9 @@ updates:
       - dependency-name: ember-source
         versions:
           - ">= 0"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: weekly
+    reviewers:
+      - "concordnow/frontend"
