@@ -20,5 +20,6 @@
 /bower.json.ember-try
 /package.json.ember-try
 
+/tests/dummy/app/components/*-example.hbs
 /tests/dummy/app/templates/docs/
 /tests/dummy/app/templates/index.hbs
