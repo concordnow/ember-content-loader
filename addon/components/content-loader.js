@@ -45,13 +45,13 @@ export default class ContentLoader extends Component {
    *
    * Defaults to an empty string.
    *
-   * This prop is common used as: <ContentLoader baseUrl={window.location.pathname} />
-   * which will fill the SVG attribute with the relative path. Related #93.
+   * This prop is common used as: <ContentLoader baseUrl={{window.location.pathname}} />
+   * which will fill the SVG attribute with the relative path. Related https://github.com/danilowoz/react-content-loader/issues/93.
    * It's used to describe what element it is. Use `false` to remove.
    *
    * @argument baseUrl
    * @type String
-   * @default "Loading interface..."
+   * @default ""
    */
   get baseUrl() {
     return this.args.baseUrl ?? '';

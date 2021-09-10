@@ -59,7 +59,6 @@ Thanks
 ------------------------------------------------------------------------------
 
 * [react-content-loader](https://github.com/danilowoz/react-content-loader)
-* [ember-cli-addon-docs](https://github.com/ember-learn/ember-cli-addon-docs)
 
 
 Contributing
