@@ -4,7 +4,7 @@ module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'dummy',
     environment,
-    rootURL: '/',
+    rootURL: process.env.ROOT_URL || '/',
     locationType: 'hash',
     EmberENV: {
       FEATURES: {
