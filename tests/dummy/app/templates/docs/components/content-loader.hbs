@@ -1,0 +1,110 @@
+{{page-title "ContentLoader"}}
+
+{{! MD-BLOCK }}
+# &lt;ContentLoader&gt;
+
+## API
+
+**animate**: *Boolean*
+
+Defaults to `true`.
+
+Opt-out of animations with `false`
+
+
+**ariaLabel**: *String|Boolean*
+
+Defaults to `Loading interface...`
+
+It's used to describe what element it is. Use `false` to remove.
+
+
+**baseUrl**: *String*
+
+Required if you're using `<base url="/" />` in your `<head/>`.
+
+Defaults to an empty string.
+
+This prop is common used as: `<ContentLoader baseUrl={{window.location.pathname}} />`
+which will fill the SVG attribute with the relative path. Related https://github.com/danilowoz/react-content-loader/issues/93.
+It's used to describe what element it is. Use `false` to remove.
+
+
+**speed**: *Number*
+
+Defaults to `2`.
+
+Animation speed in seconds.
+
+
+**interval**: *Number*
+
+Defaults to `0.25`.
+
+Interval of time between runs of the animation, as a fraction of the animation speed.
+
+
+**width**: *Number*
+
+Defaults to `400`.
+
+It will be set in the viewbox attr in the `<svg />`.
+
+
+**height**: *Number*
+
+Defaults to `130`.
+
+It will be set in the viewbox attr in the `<svg />`.
+
+
+**gradientRatio**: *Number*
+
+Defaults to `2`.
+
+Width of the animated gradient as a fraction of the viewbox width.
+
+
+**rtl**: *Boolean*
+
+Defaults to `false`.
+
+Content right-to-left.
+
+
+**preserveAspectRatio**: *String*
+
+Defaults to `none`.
+
+Aspect ratio option of `<svg/>`.
+Avaible options [here](https://developer.mozilla.org/fr/docs/Web/SVG/Attribute/preserveAspectRatio#Syntaxe)
+
+
+**primaryColor**: *String*
+
+Defaults to `#f0f0f0`.
+
+Background of animation.
+
+
+**secondaryColor**: *String*
+
+Defaults to `#e0e0e0`.
+
+Placeholder/layer of animation.
+
+
+**primaryOpacity**: *Number*
+
+Defaults to `1`.
+
+Background opacity (0 = transparent, 1 = opaque) used to solve a issue in [Safari](#safari--ios)
+
+
+**secondaryOpacity**: *Number*
+
+Defaults to `1`.
+
+Animation opacity (0 = transparent, 1 = opaque) used to solve a issue in [Safari](#safari--ios)
+
+{{! MD-BLOCK }}
