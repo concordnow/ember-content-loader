@@ -12,7 +12,7 @@ module('Integration | Component | content-loader', function (hooks) {
       <ContentLoader @animate={{false}} />
     `);
 
-    percySnapshot(assert);
+    await percySnapshot(assert);
 
     // Prevent 0 assertion exception
     assert.equal(0, 0);
@@ -52,7 +52,7 @@ module('Integration | Component | content-loader', function (hooks) {
       </ContentLoader>
     `);
 
-      percySnapshot(assert);
+      await percySnapshot(assert);
 
       // Prevent 0 assertion exception
       assert.equal(0, 0);
