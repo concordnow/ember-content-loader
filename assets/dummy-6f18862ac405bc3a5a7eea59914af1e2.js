@@ -51,7 +51,7 @@ e.default=c})),define("dummy/helpers/get-code-snippet",["exports","ember-code-sn
 var n=t.default
 e.default=n})),define("dummy/initializers/container-debug-adapter",["exports","ember-resolver/resolvers/classic/container-debug-adapter"],(function(e,t){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
 var n={name:"container-debug-adapter",initialize:function(){var e=arguments[1]||arguments[0]
-e.register("container-debug-adapter:main",t.default),e.inject("container-debug-adapter:main","namespace","application:main")}}
+e.register("container-debug-adapter:main",t.default)}}
 e.default=n})),define("dummy/initializers/export-application-global",["exports","dummy/config/environment"],(function(e,t){function n(){var e=arguments[1]||arguments[0]
 if(!1!==t.default.exportApplicationGlobal){var n
 if("undefined"!=typeof window)n=window
