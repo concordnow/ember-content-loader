@@ -14,6 +14,9 @@ updates:
       - dependency-name: ember-source
         versions:
           - ">= 0"
+      - dependency-name: eslint
+        versions:
+          - ">= 8"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
