@@ -79,7 +79,7 @@
     "prettier": "^2.4.0",
     "qunit": "^2.16.0",
     "qunit-dom": "^2.0.0",
-    "release-it": "^14.11.5",
+    "release-it": "^14.11.8",
     "webpack": "^5.52.0"
   },
   "engines": {
