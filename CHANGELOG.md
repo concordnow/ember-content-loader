@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.0.0] - 2021-12-03
+
 ### Changed
 - Bump dependencies
 - Drop ember 3.16 support
@@ -65,6 +67,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - First implementation
 
+[3.0.0]: https://github.com/concordnow/ember-content-loader/compare/v2.0.0...v3.0.0
 [2.0.0]: https://github.com/concordnow/ember-content-loader/compare/v1.0.1...v2.0.0
 [1.0.1]: https://github.com/concordnow/ember-content-loader/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/concordnow/ember-content-loader/compare/v0.1.3...v1.0.0
@@ -73,4 +76,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [0.1.1]: https://github.com/concordnow/ember-content-loader/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/concordnow/ember-content-loader/releases/tag/v0.1.0
 
-[Unreleased]: https://github.com/concordnow/ember-content-loader/compare/v2.0.0...HEAD
+[Unreleased]: https://github.com/concordnow/ember-content-loader/compare/v3.0.0...HEAD
