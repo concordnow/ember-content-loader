@@ -8,6 +8,8 @@ module('Integration | Component | content-loader', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders default layout', async function (assert) {
+    assert.expect(1);
+
     await render(hbs`
       <ContentLoader @animate={{false}} />
     `);
@@ -16,9 +18,12 @@ module('Integration | Component | content-loader', function (hooks) {
 
     // Prevent 0 assertion exception
     assert.equal(0, 0);
-  }),
-    test('it renders complex layout', async function (assert) {
-      await render(hbs`
+  });
+
+  test('it renders complex layout', async function (assert) {
+    assert.expect(1);
+
+    await render(hbs`
       <ContentLoader
         @height={{300}}
         @width={{500}}
@@ -52,19 +57,20 @@ module('Integration | Component | content-loader', function (hooks) {
       </ContentLoader>
     `);
 
-      await percySnapshot(assert);
+    await percySnapshot(assert);
 
-      // Prevent 0 assertion exception
-      assert.equal(0, 0);
-    }),
-    test('it renders with animation', async function (assert) {
-      await render(hbs`
+    // Prevent 0 assertion exception
+    assert.equal(0, 0);
+  });
+
+  test('it renders with animation', async function (assert) {
+    await render(hbs`
       <ContentLoader @animate={{true}} />
     `);
 
-      assert.notEqual(this.element.querySelectorAll('animate').length, 0);
+    assert.notEqual(this.element.querySelectorAll('animate').length, 0);
 
-      await render(hbs`
+    await render(hbs`
       <ContentLoader
         @animate={{true}}
       >
@@ -72,8 +78,8 @@ module('Integration | Component | content-loader', function (hooks) {
       </ContentLoader>
     `);
 
-      assert.notEqual(this.element.querySelectorAll('animate').length, 0);
-    });
+    assert.notEqual(this.element.querySelectorAll('animate').length, 0);
+  });
 
   test('it renders without animation', async function (assert) {
     await render(hbs`
