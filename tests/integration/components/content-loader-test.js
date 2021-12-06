@@ -17,7 +17,7 @@ module('Integration | Component | content-loader', function (hooks) {
     await percySnapshot(assert);
 
     // Prevent 0 assertion exception
-    assert.equal(0, 0);
+    assert.strictEqual(0, 0);
   });
 
   test('it renders complex layout', async function (assert) {
@@ -60,7 +60,7 @@ module('Integration | Component | content-loader', function (hooks) {
     await percySnapshot(assert);
 
     // Prevent 0 assertion exception
-    assert.equal(0, 0);
+    assert.strictEqual(0, 0);
   });
 
   test('it renders with animation', async function (assert) {
@@ -86,7 +86,7 @@ module('Integration | Component | content-loader', function (hooks) {
       <ContentLoader @animate={{false}} />
     `);
 
-    assert.equal(this.element.querySelectorAll('animate').length, 0);
+    assert.dom('animate').exists({ count: 0 });
 
     await render(hbs`
       <ContentLoader
@@ -96,7 +96,7 @@ module('Integration | Component | content-loader', function (hooks) {
       </ContentLoader>
     `);
 
-    assert.equal(this.element.querySelectorAll('animate').length, 0);
+    assert.dom('animate').exists({ count: 0 });
   });
 
   test('it renders with title', async function (assert) {
@@ -104,10 +104,7 @@ module('Integration | Component | content-loader', function (hooks) {
       <ContentLoader @ariaLabel='My awesome title' />
     `);
 
-    assert.equal(
-      this.element.querySelectorAll('title')[0].textContent,
-      'My awesome title'
-    );
+    assert.dom('title').hasText('My awesome title');
 
     await render(hbs`
       <ContentLoader
@@ -117,9 +114,6 @@ module('Integration | Component | content-loader', function (hooks) {
       </ContentLoader>
     `);
 
-    assert.equal(
-      this.element.querySelectorAll('title')[0].textContent,
-      'My awesome title'
-    );
+    assert.dom('title').hasText('My awesome title');
   });
 });
