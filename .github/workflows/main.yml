@@ -8,7 +8,6 @@ on:
   pull_request:
   schedule:
     - cron: '0 3 * * *' # daily, at 3am
-  pull_request_target:
 
 env:
   NODE_VERSION: '12'
@@ -17,7 +16,6 @@ jobs:
   test:
     name: 'Tests'
     runs-on: ubuntu-latest
-    if: github.event_name != 'pull_request_target'
 
     steps:
       - uses: actions/checkout@v2
@@ -39,7 +37,6 @@ jobs:
   floating-dependencies:
     name: 'Floating Dependencies'
     runs-on: ubuntu-latest
-    if: github.event_name != 'pull_request_target'
 
     steps:
       - uses: actions/checkout@v2
@@ -51,8 +48,9 @@ jobs:
 
   try-scenarios:
     name: "Try: ${{ matrix.ember-try-scenario }}"
+
     runs-on: ubuntu-latest
-    if: github.event_name != 'pull_request_target'
+
     needs: test
 
     strategy:
@@ -126,24 +124,3 @@ jobs:
         uses: softprops/action-gh-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  dependabot:
-    runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request_target' && github.actor == 'dependabot[bot]'
-    needs: [try-scenarios]
-    permissions:
-      pull-requests: write
-      contents: write
-
-    steps:
-      - name: Dependabot metadata
-        id: metadata
-        uses: dependabot/fetch-metadata@v1.1.1
-        with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
-      - name: Enable auto-merge for Dependabot PRs
-        if: ${{steps.metadata.outputs.update-type == 'version-update:semver-patch' || steps.metadata.outputs.update-type == 'version-update:semver-minor'}}
-        run: gh pr merge --auto --rebase "$PR_URL"
-        env:
-          PR_URL: ${{github.event.pull_request.html_url}}
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
