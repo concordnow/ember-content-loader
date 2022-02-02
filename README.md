@@ -52,7 +52,7 @@ You can use the [online editor](http://danilowoz.com/create-content-loader/) to 
 Options
 ------------------------------------------------------------------------------
 
-You can find all `<ContentLoader>` available options [here](https://concordnow.github.io/ember-content-loader/docs/api/components/content-loader)
+You can find all `<ContentLoader>` available options [here](https://concordnow.github.io/ember-content-loader/#/docs/components/content-loader)
 
 
 Thanks
