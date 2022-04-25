@@ -10,7 +10,7 @@ on:
     - cron: '0 3 * * *' # daily, at 3am
 
 env:
-  NODE_VERSION: '12'
+  NODE_VERSION: '16'
 
 jobs:
   test:
