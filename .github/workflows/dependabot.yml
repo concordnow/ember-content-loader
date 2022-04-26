@@ -18,7 +18,7 @@ jobs:
               let { data: { check_runs } } = await github.rest.checks.listForRef({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                ref: context.ref
+                ref: '${{ github.event.pull_request.head.ref }}'
               });
               console.log(check_runs);
               if (check_runs.length === 0) {
