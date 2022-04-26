@@ -21,6 +21,9 @@ jobs:
                 ref: context.ref
               });
               console.log(check_runs);
+              if (check_runs.length === 0) {
+                continue;
+              }
               workflowPending = !check_runs
                             .filter(({ name }) => !['waiter', 'dependabot'].includes(name) )
                             .every(({ conclusion, status }) => status === 'completed' && ['success', 'skipped'].includes(conclusion));
