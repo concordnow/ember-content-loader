@@ -46,7 +46,7 @@
     "@glimmer/tracking": "^1.0.4",
     "@percy/cli": "^1.0.0-beta.67",
     "@percy/ember": "^3.0.0",
-    "@release-it/keep-a-changelog": "^2.3.0",
+    "@release-it/keep-a-changelog": "^3.0.0",
     "babel-eslint": "^10.1.0",
     "broccoli-asset-rev": "^3.0.0",
     "ember-auto-import": "^2.2.0",
@@ -79,7 +79,7 @@
     "prettier": "^2.4.0",
     "qunit": "^2.16.0",
     "qunit-dom": "^2.0.0",
-    "release-it": "^14.11.8",
+    "release-it": "^15.0.0",
     "webpack": "^5.52.0"
   },
   "engines": {
