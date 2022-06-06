@@ -92,7 +92,7 @@
     "configPath": "tests/dummy/config"
   },
   "volta": {
-    "node": "12.22.7",
+    "node": "16.14.2",
     "npm": "7.24.2"
   }
 }
