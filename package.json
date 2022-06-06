@@ -92,7 +92,9 @@
     "configPath": "tests/dummy/config"
   },
   "volta": {
-    "node": "16.14.2",
-    "npm": "7.24.2"
+    "node": "16.14.2"
+  },
+  "overrides": {
+    "ember-source": "$ember-source"
   }
 }
