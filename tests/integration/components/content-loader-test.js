@@ -74,7 +74,7 @@ module('Integration | Component | content-loader', function (hooks) {
       <ContentLoader
         @animate={{true}}
       >
-        <rect x="0" y="0" rx="5" ry="5" width=50 height=50 />
+        <rect x="0" y="0" rx="5" ry="5" width="50" height="50" />
       </ContentLoader>
     `);
 
@@ -92,7 +92,7 @@ module('Integration | Component | content-loader', function (hooks) {
       <ContentLoader
         @animate={{false}}
       >
-        <rect x="0" y="0" rx="5" ry="5" width=50 height=50 />
+        <rect x="0" y="0" rx="5" ry="5" width="50" height="50" />
       </ContentLoader>
     `);
 
@@ -110,7 +110,7 @@ module('Integration | Component | content-loader', function (hooks) {
       <ContentLoader
         @ariaLabel='My awesome title'
       >
-        <rect x="0" y="0" rx="5" ry="5" width=50 height=50 />
+        <rect x="0" y="0" rx="5" ry="5" width="50" height="50" />
       </ContentLoader>
     `);
 
